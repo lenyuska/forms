@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms3</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <form id="form1">
+      <input type="text" id="text1" placeholder="Введите текст..." >
+      <input type="text" id="text2" placeholder="Введите текст...">
+      <input type="text" id="text3" placeholder="Введите текст...">
+    </form>
+  </div>
+
+  <script>
+    const textFields = document.querySelectorAll('#form1 input[type="text"]');
+    textFields.forEach(field => {
+      field.addEventListener("mouseover", function() {
+        field.focus(); 
+        field.value = field.id; 
+      });
+
+      field.addEventListener("mouseout", function() {
+        field.blur(); 
+        field.value = ""; 
+      });
+    });
+  </script>
+</body>
+</html>

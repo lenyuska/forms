@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms2</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <form id="form1">
+      <input type="text" id="textField" name="textField" placeholder="Введите текст...">
+      <div class="buttons">
+        <button type="button" id="lock">Заблокировать</button>
+        <button type="button" id="unlock">Разблокировать</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    const textField = document.getElementById("textField");
+    const lock = document.getElementById("lock");
+    const unlock = document.getElementById("unlock");
+    lock.addEventListener("click", function(){
+        textField.disabled = true;
+    });
+    unlock.addEventListener("click", function(){
+      textField.disabled = false;
+    });
+  </script>
+</body>
+</html>
